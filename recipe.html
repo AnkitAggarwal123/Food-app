@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);
+
+        *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        height: 50px;
+        border: 1px solid rgba(34,36,38,.15);
+        box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+        margin-bottom: 20px;
+
+    }
+
+    .logo{
+        margin-right: 40px;
+    }
+
+    
+    .anchor{
+        text-decoration: none;
+        color: rgba(0,0,0,.87);
+        margin-left: 20px;
+        font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+        font-size: 14px;
+    }
+
+    .input{
+        width: 700px;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    h2{
+    font-family: Courgette,cursive;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    }
+
+    .middle{
+        font-size: 1.07142857rem;
+        line-height: 1.28571429em;
+    margin: calc(2rem - 0.14286em) 0 1rem;
+    font-weight: 700;
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    }
+
+    .search-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  /* margin-left: 200px; */
+}
+
+#search-input {
+  width: 70%;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 700px;
+}
+
+#search-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* margin-right: 200px; */
+}
+
+#search-button:hover {
+  background-color: #45a049;
+}
+
+.recipe-list{
+    min-height: 1em;
+    font-size: 2em;
+    text-align: center;
+    /* margin-top: -0.14285714em; */
+    font-family: Courgette,cursive!important;
+    margin-top: 10px;
+}
+
+/* .column{
+    width: 17%;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+} */
+/* 
+.card{
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: 0.28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+} */
+/* 
+.content{
+    font-weight: 700;
+    font-size: 1.28571429em;
+    line-height: 1.28571429em;
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    color: rgba(0,0,0,.85);
+    width: 50%;
+} */
+
+/* .brand{
+    font-size: 1.2rem;
+    color: #b69811;
+    font-family: Courgette,cursive!important;
+} */
+
+/* .detail{
+    background-color: #2185d0;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+    display: inline-block;
+    padding: 0.78571429em 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    border-radius: 0.28571429rem;
+    text-decoration: none;
+} */
+
+/* .recipebutton{
+    background-color: #2185d0;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+    display: inline-block;
+    padding: 0.78571429em 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    border-radius: 0.28571429rem;
+    text-decoration: none;
+
+} */
+
+.result{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.recipelistname{
+    display: inline;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: inherit;
+    
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: 0.28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    column-gap: 50px;
+    margin-bottom: 20px;
+    
+    
+  } 
+  .upper-text{
+    font-weight: 700;
+    font-size: 1.28571429em;
+    margin-top: 2px;
+    line-height: 1.28571429em;
+    color: rgba(0,0,0,.85);
+  }
+  
+  .lower-text{
+    font-size: 1.2rem;
+    color: #b69811;
+    font-family: Courgette,cursive!important;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #btndetail{
+    cursor: pointer; 
+    display: inline-block;
+    min-height: 1em; 
+    outline: 0; 
+    border: none;
+    vertical-align: baseline;
+    background-color: #2185d0;;
+    color: rgba(0,0,0,.6);
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    margin: 0 0.25em 0 0;
+    padding: 0.78571429em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  #btnrecipe{
+    cursor: pointer; 
+    display: inline-block; 
+    min-height: 1em; 
+    outline: 0; 
+    border: none;
+    vertical-align: baseline;
+    background-color: #21ba45;
+    color: rgba(0,0,0,.6);
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    margin: 0 0.25em 0 0;
+    padding: 0.78571429em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    column-gap: 25px;
+    padding: 10px;
+  }
+  #img{
+    height:200px;
+}
+
+
+    
+
+</style>
+<body>
+    <div class="header">
+        <img class="logo" src="https://food2forks.netlify.app/static/media/logo.cc3fff7e.svg" alt="image">
+        <a class="anchor" href="index.html">Home</a>
+        <a class="anchor" href="/">Recipe</a>
+    </div>
+    <div class="input">
+        <h2>
+            Search Recipes With
+            <span style="color: rgb(255, 51, 51);">Food2Fork</span>
+        </h2>
+        <h4 class = "middle">Type Recipes Separated By Comma</h4>
+        <form class="search-form">
+            <input type="text" id="search-input" placeholder="chicken,onion,carrots">
+            <button type="submit" id="search-button">Search</button>
+          </form>
+    </div>
+    <div>
+        <div class="recipe-list">
+            <p class="recipelistname">RECIPE LIST</p><p class="input-name recipelistname"></p>
+        </div>
+        <div class="result">
+
+        </div>
+
+    </div>
+
+
+    <script src="script.JS"></script>
+</body>
+</html>

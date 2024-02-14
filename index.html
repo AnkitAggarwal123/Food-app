@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        height: 50px;
+
+    }
+
+    a{
+        text-decoration: none;
+        color: rgba(0,0,0,.87);
+        margin-left: 20px;
+        font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+        font-size: 14px;
+    }
+
+    .logo{
+        margin-right: 40px;
+    }
+
+    .main{
+        height: 92.2vh;
+        background: linear-gradient(rgba(8,8,8,.3),rgba(8,8,8,.3)),url("https://food2forks.netlify.app/images/homeBcg.jpeg");
+        /* background: url("https://food2forks.netlify.app/images/homeBcg.jpeg") no-repeat; */
+        position: relative;
+        background-size: cover;
+        background-position: 50%;
+        
+    }
+
+    .all{
+        height: 100vh;
+    }
+
+    .header-title{
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: Courgette,cursive;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+    line-height: 1.28571429em;
+    font: italic;
+    text-align: center;
+    padding-top: 35vh;
+
+    }
+
+    .search{
+        font-size: 1.28571429rem;
+        background-color: #1f88be;
+        color: #fff;
+        text-shadow: none;
+        padding: 0.78571429em 1.5em;
+        text-align: center;
+        font-weight: 700;
+        border-radius: 0.28571429rem;
+        font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+        margin-left: 90vh;
+    }
+
+    .search:hover{
+       background-color: #1c7cac;
+    }
+
+    
+</style>
+<body>
+    <div class="all">
+        <div class="header">
+            <img class="logo" src="https://food2forks.netlify.app/static/media/logo.cc3fff7e.svg" alt="image">
+            <a href="/">Home</a>
+            <a href="recipe.html">Recipe</a>
+        </div>
+        <div class="main">
+            <div>
+                <h1 class="header-title">Amazing Recipes</h1>
+                <a class="search" role="button" href="recipe.html" >SEARCH RECIPES</a>
+
+            </div>
+            
+    
+        </div>
+
+    </div>
+
+</body>
+</html>
